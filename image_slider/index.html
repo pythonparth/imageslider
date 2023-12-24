@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Image Slider</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class = "slider">
+            <div class = "slides">
+              <!--radio button start-->
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+              <input type="radio" name="radio-btn" id="radio3">
+              <input type="radio" name="radio-btn" id="radio4">
+              <input type="radio" name="radio-btn" id="radio5">
+              <input type="radio" name="radio-btn" id="radio6">
+              <input type="radio" name="radio-btn" id="radio7">
+              <!--radio button end-->
+              <!--slide image starts-->
+              <div class = "slide first">
+                <img src="image1.png" alt="">
+                <figcaption>In 1974, the 3,000-year-old mummy 
+                    of Pharaoh Ramses IIwas issued a valid 
+                    Egyptian passport so that he could be flown to Paris for repair.</figcaption>
+              </div>
+              <div class = "slide">
+                <img src = "image2.jpg" alt="">
+                <figcaption>The different expressions
+                     of six Polish civilians moments before
+                    death by firing squad, 1939.</figcaption>
+              </div>
+              <div class = "slide">
+                <img src = "image3.jpg" alt="">
+                <figcaption>The Greatest inventor of our century, 
+                    Sir Nikola Tesla died alone and his labs burnt after his death because 
+                    he demonstated an idea to provide free electricity.
+                </figcaption>
+              </div>
+              <div class = "slide">
+                <img src = "image4.jpg" alt="">
+                <figcaption>When Machine Learning meets esoteric Hinduism.
+                </figcaption>
+              </div>
+              <div class = "slide">
+                <img src = "image5.jpg" alt="">
+                <figcaption>The uniform worn by Archduke Franz Ferdinand 
+                    during his assassination in 1914,
+                    the event that sparked World War I.</figcaption>
+              </div>
+              <div class = "slide">
+                <img src = "image6.jpg" alt="">
+                <figcaption>Ernesto "Che" Guevara, Argentine Marxist revolutionary
+                  A major figure of the Cuban Revolution.
+                </figcaption>
+              </div>
+              <div class = "slide">
+                <img src = "image7.jpg" alt="">
+                <figcaption>The Last Supper</figcaption>
+              </div>
+              <!--slide image ends--> 
+              <!--automatic navigation starts -->
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+                <div class="auto-btn7"></div>
+              </div>
+              <!--automatic navigation ends-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class ="manual-btn"></label>
+                <label for="radio2" class ="manual-btn"></label>
+                <label for="radio3" class ="manual-btn"></label>
+                <label for="radio4" class ="manual-btn"></label>
+                <label for="radio5" class ="manual-btn"></label>
+                <label for="radio6" class ="manual-btn"></label>
+                <label for="radio7" class ="manual-btn"></label>
+            </div>
+            <!--manual navigation end-->
+        </div>
+        
+        <script type="text/javascript">
+          var counter = 1;
+          setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 7){
+              counter = 1;
+            }
+          }, 5000);
+        </script>
+    </body>
+</html>
